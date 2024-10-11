@@ -1,2 +1,2 @@
-# Exact-Diagonalization
-A Python implementation of exact diagonalization algorithm for fermion systems.
+A Python implementation of exact diagonalization for fermion system.
+Python>=3.10 is required.

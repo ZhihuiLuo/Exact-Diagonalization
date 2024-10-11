@@ -1,0 +1,253 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\fontcolor #000000
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+H & =\sum_{l\alpha\sigma}\epsilon_{l\alpha\sigma}c_{l\alpha}^{\dagger}c_{l\alpha\sigma}+\sum_{l\alpha\sigma}(V_{l\alpha\sigma}c_{l\alpha\sigma}^{\dagger}d_{\alpha\sigma}+h.c.)\\
+ & +\sum_{\alpha\beta}(h_{\alpha\beta}-\mu\delta_{\alpha\beta})d_{\alpha\sigma}^{\dagger}d_{\beta\sigma}+H_{U}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+H & =\left[\begin{array}{cc}
+A & V\\
+V^{\dagger} & B
+\end{array}\right]\\
+G & =(\omega-H)^{-1}=\left[\begin{array}{cc}
+\omega-A & -V\\
+-V^{\dagger} & \omega-B
+\end{array}\right]^{-1}=\left[\begin{array}{cc}
+G_{00} & G_{01}\\
+G_{10} & G_{11}
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+By solving 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\omega-A & -V\\
+-V^{\dagger} & \omega-B
+\end{array}\right]\left[\begin{array}{cc}
+G_{00} & G_{01}\\
+G_{10} & G_{11}
+\end{array}\right]=\left[\begin{array}{cc}
+I & 0\\
+0 & I
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+(\omega-A)G_{00}-VG_{10} & =I\\
+-V^{\dagger}G_{01}+(\omega-B)G_{11} & =I\\
+(\omega-A)G_{01} & =VG_{11}\\
+V^{\dagger}G_{00} & =(\omega-B)G_{10}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+G_{00}=\left[\omega-(A+V(\omega-B)^{-1}V^{\dagger}\right]^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Bethe lattice
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H=\sum_{<ij>\sigma}\frac{t}{\sqrt{z}}c_{i\sigma}^{\dagger}c_{j\sigma}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+G_{0}^{-1}=i\omega+\mu-t^{2}G_{imp}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bethe lattice has a density of state of semi-circle, with a radius being
+ 
+\begin_inset Formula $2t$
+\end_inset
+
+ (also half of bandwidth).
+\end_layout
+
+\begin_layout Standard
+To obtain the Green's function, we apply 
+\begin_inset Formula 
+\[
+G(z)=\int\frac{A(\omega)}{z-\omega}d\omega
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here 
+\begin_inset Formula $z$
+\end_inset
+
+ could be on both real and imaginary axes according to Kramers-Kroning relation,
+ but when 
+\begin_inset Formula $z$
+\end_inset
+
+ is on the real axis, a small broadening is required to avoid divergence
+ of 
+\begin_inset Formula $1/(z-\omega$
+\end_inset
+
+).
+ Or we can use the explict expression
+\begin_inset Formula 
+\[
+G(z)=z-sgn(Im(z))\sqrt{z^{2}-4t^{2}}/2t^{2}
+\]
+
+\end_inset
+
+for Matsubara frequency.
+ Note there may have ambiguity in the above squre-root since there always
+ 
+\begin_inset Formula $z^{2}-4t^{2}<0$
+\end_inset
+
+, which means both 
+\begin_inset Formula $\pm vi$
+\end_inset
+
+ values can satisfy.
+ It' would be safety to use the alternative form 
+\begin_inset Formula 
+\[
+G(z)=z-sgn(Im(z))i\sqrt{4t^{2}-z^{2}}/2t^{2}
+\]
+
+\end_inset
+
+When on real frequency
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(z)=z-sgn(z)\sqrt{z^{2}-4t^{2}}/2t^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
