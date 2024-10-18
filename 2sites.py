@@ -12,7 +12,7 @@ shows(bl, M)  # show the basis
 
 # load H00 ===============================
 H00 = [[0,-1],[-1,0]]
-H0 = load_H00(bl,H00,M)
+H0 = load_H00(bl,H00)
 
 # H0s = load_H00(bl,H00,M,sparse=True)
 # print(np.any(H0-H0s))

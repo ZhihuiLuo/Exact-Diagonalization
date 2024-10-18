@@ -19,7 +19,7 @@ Bl = build_full_basis(M)
 # Bl = list(np.squeeze(Bl))
 Bl = [b for bl in Bl for b in bl]
 
-H0 = load_H00(Bl,H00,M)
+H0 = load_H00(Bl,H00)
 HU = load_H_Kanamori(Bl, M, sl, Ul,hartree_shift=False)
 
 H = H0+HU

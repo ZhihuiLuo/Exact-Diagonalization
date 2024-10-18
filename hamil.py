@@ -3,8 +3,9 @@ from .exact_diag import *
 import itertools as its
 
 
-def load_H00(bl,H00,M):
+def load_H00(bl,H00):
     H0 = 0
+    M = len(H00)
     for s,i,j in its.product(range(Ns),range(M),range(M)):
         if H00[i][j]==0: continue
         H0 += H00[i][j]*map2mtx(bl, [cdagc(b,i+M*s,j+M*s) for b in bl])
@@ -94,7 +95,7 @@ if __name__=='__main__':
     
     bd = BD()
     for bl in Bl:
-        H0 = load_H00(bl,H00,M).toarray()
+        H0 = load_H00(bl,H00).toarray()
         HU = load_H_Kanamori(bl, M, sl, Ul,hartree_shift=True).toarray()
         
         bd.push(H0+HU)
